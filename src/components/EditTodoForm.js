@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import Button from 'react-bootstrap/Button';
 
 export const EditTodoForm = ({editTodo,task}) => {
      const [value,setValue] = useState(task.task)
@@ -10,7 +11,7 @@ export const EditTodoForm = ({editTodo,task}) => {
   return (
     <form className='TodoForm' onSubmit={handleSubmit}>
      <input type="text" className='todo-input' placeholder='Update Task' value={value} onChange={(e)=>setValue(e.target.value)}/>
-     <button type="submit" className='todo-btn'>Update Task</button>
+     <Button type='submit' className='rounded-0' variant='primary' >Add Task</Button>
     </form>
   )
 }
